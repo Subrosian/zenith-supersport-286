@@ -1,0 +1,43 @@
+Fm: John Barnes [70421,617]
+
+Hi Chuck,
+
+I have cracked the SS286 / CP343 Mystery !!!
+
+I sucessfully installed a standard Conner HDD in a supersport that
+previously had a cp343 in it. The board was marked 3RE4B13500030C
+in the silkscreen under the FDD. I presume that this is a rev C
+motherboard.
+
+I begged some schematics from the authorized service centre.
+
+On schematic 11 they show a set of links marked "JVC" near an
+undesignated HC08 chip. I determined that the Interupt requests
+from the drive were not being serviced by the microprocessor. The
+signal on pin 39, drive BUSY -active low, was being ANDED with the
+IRQ request line hence NO interrupts by removing the AND gate
+everything works o.k. (Pin 39 on the CP343 must be HIGH if BUSY).
+
+The mods are not too bad. But you have to work on the surface mount
+devices.
+
+No components are required, just about 10 inches of wire wrap wire.
+
+1) Remove the Motherboard from the case.
+
+2) Locate the Connector CN15 cut the track leaving pin 25. Count
+the pins very carefully. Solder a piece of wire wrap wire to pin
+25. Feed the wire the hole beteen the legs of Q2. Solder the wire
+to pin 1 of the IC12DB. (I don't know the reason for this mod. I
+found it on a rev D motherboard).
+
+3) Locate the IC 14F. This is an HC08. Lift pin 6 of the ic while
+heating it with a fine soldering iron. Solder a piece of wire wrap
+wire to pin 4 of 14F. Solder the other end of this wire to CN18 pin
+14.
+
+4) Insert Jumper JP28 if it is missing.
+
+(Again I don't know the reason - I found it on a rev D.)
+
+FROM: https://groups.google.com/g/comp.sys.zenith/c/ABBuMFnjRZ4
