@@ -1,0 +1,3 @@
+The only drive overlay that I've gotten to work is the OnTrack Disk Manager 9.57. For some reason, the laptop keeps going to Type 29 for the hard drive so I'm just leaving it that way.
+
+For some reason, in both of my computers, EZ-Drive (all versions I tried) will boot fine, but when holding down CTRL to boot from floppy, it freezes on the status screen.
